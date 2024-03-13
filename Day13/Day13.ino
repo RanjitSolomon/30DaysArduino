@@ -1,4 +1,3 @@
-// C++ code
 #include <Key.h>
 #include <Keypad.h>
 
