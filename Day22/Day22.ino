@@ -156,6 +156,13 @@ void draw(void){
     // 48 = 110000, 48>>3, 6 = 0110
     // 70 = 1000110, 70>>3,  8= 01000
     case 0: u8g_box_frame(draw_state&7); break;
+    // draw_state & 7 will always will be between 0-8
+    // 8 = 1000, 7 = 0111, 1000 & 0111 = 0000 = 0
+    // 9 = 1001, 7 = 0111, 1001 & 0111 = 0001 = 1
+    // 10 = 1010, 7 = 0111, 1010 & 0111 = 0010 = 2
+    // 11 = 1011, 7 = 0111, 1011 & 0111 = 0011 = 3
+    // 49 = 110001, 7 = 0111, 110001 & 0111 = 000001 = 1
+    // 50 = 110010, 7 = 0111, 110010 & 0111 = 000010 = 2
     case 1: u8g_disc_circle(draw_state&7); break;
     case 2: u8g_r_frame(draw_state&7); break;
     case 3: u8g_string(draw_state&7); break;
